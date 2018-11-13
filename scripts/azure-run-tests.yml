@@ -6,12 +6,13 @@ steps:
   displayName: 'Install Node.js'
 
 - bash: |
+    yarn
     yarn run build
   displayName: 'Install and build'
 
 - script: |
     cd packages/pkg-tests
-    yarn
+    yarn test
   displayName: 'Install the acceptance tests'
 
 - script: |
