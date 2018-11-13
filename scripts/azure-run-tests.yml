@@ -14,8 +14,7 @@ steps:
   displayName: 'Build'
 
 - script: |
-    cd packages/pkg-tests
-    yarn jest yarn --detectOpenHandles --reporters=default --reporters=jest-junit
+    yarn pkg-tests
   displayName: 'Run the acceptance tests'
 
 - task: PublishTestResults@2
