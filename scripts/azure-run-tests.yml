@@ -12,7 +12,7 @@ steps:
 
 - script: |
     cd packages/pkg-tests
-    yarn test
+    yarn
   displayName: 'Install the acceptance tests'
 
 - script: |
