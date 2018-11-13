@@ -5,17 +5,13 @@ steps:
     versionSpec: $(node_version)
   displayName: 'Install Node.js'
 
-- bash: |
+- script: |
     yarn
-    yarn run build
-    ls -lhR bin
-    ls -lhR lib
-  displayName: 'Install and build'
+  displayName: 'Install dependencies'
 
 - script: |
-    cd packages/pkg-tests
-    yarn
-  displayName: 'Install the acceptance tests'
+    yarn build
+  displayName: 'Build'
 
 - script: |
     cd packages/pkg-tests
