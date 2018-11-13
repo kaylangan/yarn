@@ -18,8 +18,7 @@ steps:
   displayName: 'Install the acceptance tests'
 
 - script: |
-    cd packages/pkg-tests
-    yarn jest yarn --detectOpenHandles --reporters=default --reporters=jest-junit
+    yarn --cwd packages/pkg-tests jest yarn.test.js --detectOpenHandles --reporters=default --reporters=jest-junit
   displayName: 'Run the acceptance tests'
 
 - task: PublishTestResults@2
